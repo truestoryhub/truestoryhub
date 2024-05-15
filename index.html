@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Styled Form</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* General styling for the body */
+    body {
+      font-family: 'Montserrat', sans-serif;
+      display: flex;
+      justify-content: flex-start; /* Align content to the top */
+      align-items: center; /* Center items horizontally */
+      min-height: 100vh;
+      margin: 0;
+      background-color: #4b0082; /* Darker purple background */
+      padding-top: 2rem; /* Add some padding on top for better spacing */
+      flex-direction: column; /* Column direction to stack items vertically */
+    }
+
+    /* General styling for the form */
+    form#fs-frm {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      width: 90%;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    /* Styling for the fieldset */
+    fieldset#fs-frm-inputs {
+      border: none;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+    }
+
+    /* Styling for labels */
+    form#fs-frm label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+      color: #333;
+    }
+
+    form#fs-frm label[for="message"] {
+  font-weight: bold;
+}
+
+
+    /* Styling for the textarea */
+    form#fs-frm textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+      resize: vertical;
+      margin-bottom: 1rem;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    /* Styling for the submit button */
+    form#fs-frm input[type="submit"] {
+      background-color: rgb(129, 73, 207);
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      padding: 0.75rem 1.5rem;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      width: 100%;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    form#fs-frm input[type="submit"]:hover {
+      background-color: rgb(104, 59, 166); /* Slightly darker shade for hover effect */
+    }
+
+    /* Add some spacing for better readability */
+    form#fs-frm label + textarea,
+    form#fs-frm textarea + input[type="submit"] {
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/{form_id}" method="post">
+    <fieldset id="fs-frm-inputs">
+      <label for="full-name">We post all confessions anonymously or under a fake nickname to ensure your privacy.</label>
+    </br>
+
+      <label for="message">Add your Confession/Story : </label>
+      <textarea rows="5" name="message" id="message" placeholder="Unveil Your Truth, Anonymously" required=""></textarea>
+      <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+    </fieldset>
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>
